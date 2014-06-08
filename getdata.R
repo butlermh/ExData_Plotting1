@@ -22,7 +22,7 @@ print("Checking the data file has been unzipped")
 destFile = "data/household_power_consumption.txt"
 if (!file.exists(destFile)) {
   print("Unzipping the file")
-  unzip(destFile, exdir=destDir)
+  unzip(zipFile, exdir=destDir)
 }
 
 # now load the data
