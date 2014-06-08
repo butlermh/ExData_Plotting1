@@ -2,12 +2,20 @@
 
 source("getdata.R")
 
-# note getdata also defines a function plot_by_day for plotting time series labelled by day
+# note the getdata script also defines a function plot_by_day for plotting time series labelled by day
+
+# note there are some oddities in the examples we are trying to copy 
+
+# I have copied them exactly
+# in the graph on top left unlike there is no (kilowatts) on the y axis unlike plot 2
+# in the graph on the lower left there is no box around the legend unlike plot 3
+# in the graph on the lower right the y axis has underscores (normally human readable axes are
+# preferred so no underscores would be better)
 
 par(mfrow = c(2, 2))
 
 # first plot - Global active power
-plot_by_day(d$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+plot_by_day(d$Global_active_power, type="l", xlab="", ylab="Global Active Power")
 
 # second plot - Voltage
 plot_by_day(d$Voltage, type="l", xlab="datetime", ylab="Voltage")

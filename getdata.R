@@ -36,11 +36,12 @@ d <- subset(data, data$Date=="1/2/2007" | data$Date=="2/2/2007")
 
 # format the date field
 
-d$Date <- as.Date(d$Date, "%d/%m/%Y")
-d$Day <- strftime(d$Date, '%a')
+d$DateTime <- strptime(paste(d$Date, d$Time), "%d/%m/%Y %H:%M:%S")
+d$Day <- strftime(d$DateTime, '%a')
+nValues <- dim(d)[1]
 
 # create function for creating plots with x-axis labelled by day
 plot_by_day <- function(...) {
   plot(..., xaxt="n")
-  axis(side=1, at=c(0, 1440, 2880), labels=c("Thu", "Fri", "Sat"))
+  axis(side=1, at=c(0, nValues/2, nValues), labels=c("Thu", "Fri", "Sat"))
 }

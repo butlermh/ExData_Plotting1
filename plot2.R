@@ -2,8 +2,9 @@
 
 source("getdata.R")
 
-# note getdata also defines a function plot_by_day for plotting time series labelled by day
+# note the getdata script also defines a function plot_by_day for plotting time series labelled by day
 
+par(mfrow = c(1, 1))
 plot_by_day(d$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 # write to .png file

@@ -2,6 +2,7 @@
 
 source("getdata.R")
 
+par(mfrow = c(1, 1))
 hist(d$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
 # write to .png file

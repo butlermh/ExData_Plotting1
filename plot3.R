@@ -2,8 +2,9 @@
 
 source("getdata.R")
 
-# note getdata also defines a function plot_by_day for plotting time series labelled by day
+# note the getdata script also defines a function plot_by_day for plotting time series labelled by day
 
+par(mfrow = c(1, 1))
 plot_by_day(d$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
 lines(d$Sub_metering_2, type="l", col="red")
 lines(d$Sub_metering_3, type="l", col="blue")
