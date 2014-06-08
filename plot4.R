@@ -9,6 +9,7 @@ source("getdata.R")
 # I have copied them exactly
 # in the graph on top left unlike there is no (kilowatts) on the y axis unlike plot 2
 # in the graph on the lower left there is no box around the legend unlike plot 3
+# the x-axis on the right hand side graphs is labelled "datetime", but not on the left hand side graphs
 # in the graph on the lower right the y axis has underscores (normally human readable axes are
 # preferred so no underscores would be better)
 
